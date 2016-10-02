@@ -1,0 +1,53 @@
+#include<cs50.h>
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+        float d;
+    
+        do
+        {
+            printf("dollar amount");
+            d=GetFloat();
+        }while(d<0);
+        
+        int n;           
+        int count=0;
+        d=d*100;
+        int c=round(d);
+        int total=c;
+    
+    
+        while(total>=25)
+        {
+            n=total/25;
+            count=count+n;
+            total=total-(n*25);
+        }
+    
+    
+        while(total>=10)
+        {
+            n=total/10;
+            count=count+n;
+            total=total-(n*10);
+        }
+    
+    
+        while(total>=5)
+        {
+            n=total/5;
+            count=count+n;
+            total=total-(5*n);
+        }
+    
+    
+        while(total>=1)
+        {
+            n=total;
+            count=count+n;
+            total=total-n;
+        }
+        printf("%d\n",count);
+        
+}
