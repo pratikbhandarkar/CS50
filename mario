@@ -1,0 +1,32 @@
+#include<cs50.h>
+#include<stdio.h>
+
+int main(void)
+{
+    int n,i,j,k;
+    do
+    {
+        printf("Height:");
+        n=GetInt();
+    }while(n<0 || n>23);
+    
+    for(i=0;i<n;i++)
+    {
+        //to print spaces
+        
+        for(j=n-i;j>1;j--)
+        {
+            printf(" ");
+        }
+        
+        //to print #'s'
+        
+        for(k=0;k<(i+2);k++)
+        {
+            printf("#");
+        }
+        
+        printf("\n");
+    
+    }
+}
